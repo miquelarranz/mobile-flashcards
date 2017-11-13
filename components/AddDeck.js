@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { View, TouchableOpacity, Text, StyleSheet, Platform, TextInput } from 'react-native'
-import { saveDeckTitle } from '../utils/api'
 import { connect } from 'react-redux'
 import { NavigationActions } from 'react-navigation'
+
 import { red, white } from '../utils/colors'
+import { addDeck } from '../actions'
+import { saveDeckTitle } from '../utils/api'
 
 
 function SubmitButton ({ onPress }) {
@@ -24,9 +26,11 @@ class AddDeck extends Component {
   }
 
   submit = () => {
-    saveDeckTitle(this.state.title);
-    
-    // TODO: Update the Redux Store
+    let { title } = this.state
+
+    this.props.dispatch(addDeck(title))
+
+    saveDeckTitle(title);
 
     this.toHome()
   }
@@ -74,10 +78,4 @@ const styles = StyleSheet.create({
   },
 })
 
-function mapStateToProps (state) {
-  return {}
-}
-
-export default connect(
-  mapStateToProps
-)(AddDeck)
+export default connect()(AddDeck)
