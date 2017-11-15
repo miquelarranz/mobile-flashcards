@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Text, StyleSheet, Platform, TextInput } from 'r
 import { connect } from 'react-redux'
 import { NavigationActions } from 'react-navigation'
 
-import { red, white } from '../utils/colors'
+import { blue, white } from '../utils/colors'
 import { addDeck } from '../actions'
 import { saveDeckTitle } from '../utils/api'
 
@@ -36,7 +36,6 @@ class AddDeck extends Component {
   }
 
   render() {
-
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Type the name of your new deck</Text>
@@ -63,7 +62,7 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   button: {
-    backgroundColor: red,
+    backgroundColor: blue,
     marginTop: 20,
     padding: 10,
     paddingLeft: 30,

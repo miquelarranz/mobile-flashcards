@@ -42,6 +42,10 @@ class DeckList extends Component {
                 <ListItem
                   title={item.title}
                   subtitle={`Number of cards: ${item.questions.length}`}
+                  onPress={() => this.props.navigation.navigate(
+                    'DeckDetail',
+                    { deckId: item.title }
+                  )}
                 />
               }
             />
@@ -55,8 +59,7 @@ class DeckList extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: white,
-    textAlign: 'center'
+    backgroundColor: white
   },
   title: {
     padding: 20,

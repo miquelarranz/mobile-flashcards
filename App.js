@@ -10,10 +10,11 @@ import { FontAwesome, Ionicons } from '@expo/vector-icons'
 import { red, white } from './utils/colors';
 import AddDeck from './components/AddDeck'
 import DeckList from './components/DeckList'
+import DeckDetail from './components/DeckDetail'
 
 function MobileFlashcardsStatusBar ({backgroundColor, ...props}) {
   return (
-    <View style={{ backgroundColor, height: Constants.statusBarHeight, opacity: 0.6 }}>
+    <View style={{ backgroundColor, height: Constants.statusBarHeight }}>
       <StatusBar translucent backgroundColor={backgroundColor} {...props} />
     </View>
   )
@@ -57,6 +58,15 @@ const Tabs = TabNavigator({
 const MainNavigator = StackNavigator({
   Home: {
     screen: Tabs,
+  },
+  DeckDetail: {
+    screen: DeckDetail,
+    navigationOptions: {
+      headerTintColor: white,
+      headerStyle: {
+        backgroundColor: red,
+      }
+    }
   }
 })
 
