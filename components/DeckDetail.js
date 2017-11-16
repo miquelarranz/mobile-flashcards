@@ -35,6 +35,10 @@ class DeckDetail extends Component {
             backgroundColor={blue}
             icon={{name: 'plus-one'}}
             title='Add Card'
+            onPress={() => this.props.navigation.navigate(
+              'AddCard',
+              { deckId: deck.title }
+            )}
           />
         </View>
         <View>

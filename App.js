@@ -11,6 +11,7 @@ import { red, white } from './utils/colors';
 import AddDeck from './components/AddDeck'
 import DeckList from './components/DeckList'
 import DeckDetail from './components/DeckDetail'
+import AddCard from './components/AddCard'
 
 function MobileFlashcardsStatusBar ({backgroundColor, ...props}) {
   return (
@@ -61,6 +62,15 @@ const MainNavigator = StackNavigator({
   },
   DeckDetail: {
     screen: DeckDetail,
+    navigationOptions: {
+      headerTintColor: white,
+      headerStyle: {
+        backgroundColor: red,
+      }
+    }
+  },
+  AddCard: {
+    screen: AddCard,
     navigationOptions: {
       headerTintColor: white,
       headerStyle: {
