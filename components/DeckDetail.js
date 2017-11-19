@@ -47,6 +47,10 @@ class DeckDetail extends Component {
             backgroundColor={pink}
             icon={{name: 'cached'}}
             title='Start the quiz'
+            onPress={() => this.props.navigation.navigate(
+              'Quiz',
+              { deckId: deck.title }
+            )}
           />
         </View>
       </View>
