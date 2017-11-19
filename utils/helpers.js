@@ -9,14 +9,9 @@ export function clearLocalNotification () {
     .then(Notifications.cancelAllScheduledNotificationsAsync)
 }
 
-export function clearLocalNotification () {
-  return AsyncStorage.removeItem(NOTIFICATIONS_KEY)
-    .then(Notifications.cancelAllScheduledNotificationsAsync)
-}
-
 function createNotification () {
   return {
-    title: 'It\'s Quiz Time!',
+    title: 'Quiz Time!',
     body: "Don't forget to practise today!",
     ios: {
       sound: true,

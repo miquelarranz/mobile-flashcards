@@ -64,8 +64,8 @@ class Quiz extends Component {
   }
 
   setLocalNotification = () => {
-      clearLocalNotification()
-        .then(setLocalNotification)
+    clearLocalNotification()
+      .then(setLocalNotification)
   }
 
   showAnswer = () => {
