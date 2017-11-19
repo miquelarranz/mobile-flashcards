@@ -34,8 +34,10 @@ Mobile Flashcards is distributed under the MIT license.
 
 ## Screenshots
 
-![Posts Overview](src/images/documentation/Posts%20Overview.png)
+![Deck List](src/images/deck-list.png)
 
-![Post Detail](src/images/documentation/Post%20Detail.png)
+![Add cards to your decks](src/images/add-card.png)
 
-![Create Post Modal](src/images/documentation/Create%20Post%20Modal.png)
+![Quiz yourself](src/images/quiz-question.png)
+
+![Get a score](src/images/quiz-final.png)
