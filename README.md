@@ -1,4 +1,4 @@
-# Readable
+# Mobile Flashcards
 
 Third project of the React Nanodegree from Udacity. It is a simple app with made [React Native]('https://facebook.github.io/react-native/') which allows you to create decks of questions and challenge yourself against the "machine".
 

@@ -21,8 +21,11 @@ class AddDeck extends Component {
     title: ''
   }
 
-  toHome = () => {
-    this.props.navigation.dispatch(NavigationActions.back({key: 'AddDeck'}))
+  toTheDetail = () => {
+    this.props.navigation.navigate(
+      'DeckDetail',
+      { deckId: this.state.title }
+    )
   }
 
   submit = () => {
@@ -30,9 +33,9 @@ class AddDeck extends Component {
 
     this.props.dispatch(addDeck(title))
 
-    saveDeckTitle(title);
+    saveDeckTitle(title)
 
-    this.toHome()
+    this.toTheDetail()
   }
 
   render() {
